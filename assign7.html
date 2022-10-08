@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Assignment 7</title>
+</head>
+<body>
+    <script>
+        //1.
+        let str = 'icecream';
+        let outp = '';
+        if(str.length<4){
+            outp = str
+        }else{
+            for(let i=0;i<str.length;i++){
+                if( i === 4){
+                    break;
+                }
+                outp = outp + str[i]
+            }
+        }
+        console.log(outp,'output')
+
+      // 2 .
+      let str2 = 'Hii Boy';
+      let outp2 = str2.replace(/\s+/g, '');
+      console.log(outp2,'string without space')
+
+      // 3. 
+      let str3 = 'Hii Boy';
+      let str_arr = str3.split(' ').reverse();
+      let outp3 = str_arr.join(" ");
+      console.log(outp3,'q3')
+
+       // 4.
+       let str4 = 'apple';
+       let outp4 = str4.replace('a','x');
+       console.log(outp4,'que 4 ans')
+
+       // 5. ans split()
+
+       // 6. ans includes()
+       
+       // 7. ans \n
+
+       // 8. 
+       let str8 = 'Capital';
+       function check(str){
+        if(str.charAt(0) === str.charAt(0).toUpperCase() ){
+            console.log('uppercase')
+        }else{
+            console.log('lowercase')
+        }
+       }
+       check(str8);
+
+       // 9.
+       let str9 = 'yes';
+       function correctInput(){
+         return   str9.toUpperCase()
+       }
+       correctInput()
+    
+       // 10.
+       let str10 = 'hello';
+        // a
+        console.log(str10.toUpperCase());
+        // b
+        console.log(str10.charAt(0).toUpperCase());
+        // c
+        console.log(str10.toLowerCase());
+        // d
+        let arr = str10.split('');
+        let halve_value = Math.round(arr.length/2);
+        console.log(halve_value,'halve value');
+        let halve_arr1 = [];
+        let halve_arr2 = [];
+        for(let i=0; i<arr.length;i++){
+           if(i>=halve_value){
+            halve_arr1.push(arr[i])
+           }else{
+            halve_arr2.push(arr[i])
+           }
+        } 
+        console.log(halve_arr1,halve_arr2,'halve string');
+        let result_arr = [...halve_arr1,...halve_arr2];
+        let oup_str = result_arr.join('');
+        console.log(oup_str,'output string')
+
+        // e 
+        let str10_arr = str10.split('')
+        let unique_val = [];
+        let repeat_val = [];
+        for(let i=0; i<str10.length;i++){
+            if(unique_val.includes(str10[i]) !== true){
+               unique_val.push(str10[i])
+            }else{
+                repeat_val.push(str10[i])
+            }
+        }
+        console.log(unique_val,repeat_val);
+        
+
+        // f
+        console.log(str10.split("").reverse().join(""));
+
+
+    </script>
+</body>
+</html>
